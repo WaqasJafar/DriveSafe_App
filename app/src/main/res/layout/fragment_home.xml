@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorBackground"
+        tools:context=".Home">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <ImageView
+
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_pic"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textFlying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:shadowColor="@color/colorPrimary2"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:text="Home"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/about_us"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/_15sdp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/about_us"
+            app:layout_constraintTop_toBottomOf="@id/about_us">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    app:tint="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@null"
+                    android:hint="Enter Your Destination"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_13ssp"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/imagerightarrow"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardsearch"
+            app:tint="@color/colorPrimary2"
+            android:layout_marginRight="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/textAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:textColor="@color/colorPrimary2"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toBottomOf="@id/imagerightarrow"
+            app:layout_constraintEnd_toStartOf="@id/imagerightarrow"
+            app:layout_constraintTop_toTopOf="@id/imagerightarrow"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="Safe your life if our aim"
+            android:textColor="@color/colorPrimary2"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imagerightarrow"
+            app:layout_constraintEnd_toStartOf="@id/textAll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imagerightarrow" />
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/safedrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/imagerightarrow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+
+                <TextView
+                    android:id="@+id/textdrive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:id="@+id/textlas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IDriveSafe improves driving in real-time using the power of advanced smartphones. The app uses the smartphone's
+native camera and sensors to detect vehicles in front of the vehicle, alerting drivers."
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textdrive"
+                    android:layout_marginLeft="14dp" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textpopular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="IDriveSafe"
+            android:textColor="@color/colorPrimary2"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/safedrive" />
+
+
+
+        <HorizontalScrollView
+            android:id="@+id/Hscroll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/vision"
+            app:layout_constraintTop_toBottomOf="@id/textpopular"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about1"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 1"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about2"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 2"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about3"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 3"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about4"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 4"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about5"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 5"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/vision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/H2scroll"
+            app:layout_constraintBottom_toTopOf="@id/Hscroll">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+
+                <TextView
+                    android:id="@+id/visiontext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vision"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:id="@+id/textaboutvision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our vision is to develop an app for drivers who are affected by the road accidents while driving in a state of tiredness and drowsiness. IDriveSafe App is a dual camera sensing app for android phones that will use machine learning algorithms to check tiredness and drowsiness of the drivers."
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/visiontext"
+                    android:layout_marginLeft="14dp" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <HorizontalScrollView
+            android:id="@+id/H2scroll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/Mision"
+            app:layout_constraintTop_toBottomOf="@id/vision"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about1"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 1"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about2"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 2"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about3"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 3"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about4"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 4"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/about5"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimary2"
+                        android:shadowDy="0"
+                        android:shadowDx="0"
+                        android:shadowRadius="10"
+                        android:text="About 5"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/Mision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/H2scroll"
+           >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+
+                <TextView
+                    android:id="@+id/misiontext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mision"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:id="@+id/textaboutmision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="iDriveSafe is a mobile safety application designed to warn you of potential collisions when you're driving. Using you smartphone's camera, iDriveSafe is able to detect the surrounding traffic, and alert you if it begins to sense danger ahead."
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/misiontext"
+                    android:layout_marginLeft="14dp" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

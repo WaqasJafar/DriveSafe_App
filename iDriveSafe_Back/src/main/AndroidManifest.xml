@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ycc.fypiDriveSafe">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/l"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/l"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="ycc.fypiDriveSafe.MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ycc.fypiDriveSafe.ResolutionSettingsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.CustomPopUp" />
+        <activity
+            android:name="ycc.fypiDriveSafe.GpsSettingsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.CustomPopUp"/>
+
+        <service android:name="ycc.fypiDriveSafe.LocationService" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+    </application>
+
+</manifest>

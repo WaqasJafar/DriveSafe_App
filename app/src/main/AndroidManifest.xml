@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fyp.iDriveSafe"
+    android:versionCode="2" >
+
+    <uses-sdk android:minSdkVersion="16" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/l"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".Welcome" />
+        <activity
+            android:name=".ui.camera.Welcome"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".FaceTrackerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaceTrackerActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActvity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".monitor_menu"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".end" />
+        <activity
+            android:name=".contactus"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Signup_Form"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Login_Form"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Display"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResolutionSettingsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.CustomPopUp" />
+        <activity
+            android:name=".GpsSettingsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.CustomPopUp" />
+
+        <service android:name=".LocationService" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+    </application>
+
+</manifest>

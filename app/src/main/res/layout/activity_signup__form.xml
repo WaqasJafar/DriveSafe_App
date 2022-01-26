@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".Signup_Form">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="@drawable/header"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Welcome"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.03"
+        android:text="To IDriveSafe"
+        android:textColor="#FBC02D"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Full Name"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:textColor="#000"
+      android:layout_marginLeft="40dp"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_name"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="text"
+        android:textSize="22dp"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="E-mail"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:textColor="#000"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="40dp"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/forget"
+        android:id="@+id/E_mail"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="text"
+        android:textSize="22dp" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Enter the Password"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:textColor="#000"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="40dp"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      app:passwordToggleEnabled="true">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="22dp" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Confirm Password"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:textColor="#000"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="40dp"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      app:passwordToggleEnabled="true">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/c_password"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="22dp" />
+  </com.google.android.material.textfield.TextInputLayout>
+  <RadioGroup
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="22dp"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Female"
+        android:textSize="20dp"/>
+  </RadioGroup>
+
+
+
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Register"
+      android:layout_marginTop="5dp"
+      android:textColor="#fff"
+      android:layout_gravity="center"
+      android:id="@+id/register"
+      android:background="@drawable/button_rounded"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      />
+
+</LinearLayout>
+
